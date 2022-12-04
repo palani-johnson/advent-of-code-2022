@@ -1,0 +1,61 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Fetch input",
+      "type": "shell",
+      "command": "./scripts/fetch-input.fish",
+      "args": ["${input:day}"],
+      "problemMatcher": []
+    },
+    {
+      "label": "Run day",
+      "dependsOn": ["Fetch input"],
+      "type": "shell",
+      "command": "koka",
+      "args": [
+        "./src/solutions/day${input:day}.kk",
+        "-e"
+      ],
+      "group": "build",
+      "presentation": {
+        "reveal": "always",
+        "panel": "dedicated"
+      }
+    }
+  ],
+  "inputs": [
+    {
+      "id": "day",
+      "type": "pickString",
+      "description": "Pick a day to run",
+      "options": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8",
+        "9",
+        "10",
+        "11",
+        "12",
+        "13",
+        "14",
+        "15",
+        "16",
+        "17",
+        "18",
+        "19",
+        "20",
+        "21",
+        "22",
+        "23",
+        "24",
+        "25"
+      ]
+    }
+  ]
+}
