@@ -29,7 +29,7 @@
       "id": "day",
       "type": "pickString",
       "description": "Pick a day to run",
-      "default": "2",
+      "default": "3",
       "options": [
         "1",
         "2",
