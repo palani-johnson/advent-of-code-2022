@@ -54,7 +54,7 @@ fun calc-p2-score((op, outcome) : (string, string))
     ("C", "Y") -> 3
     ("C", "Z") -> 1
 
-  scoroutcome-scoree + hand-score
+  outcome-score + hand-score
 
 
 
