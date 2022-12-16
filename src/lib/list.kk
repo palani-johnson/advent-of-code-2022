@@ -1,4 +1,4 @@
-module sort
+module list
 
 pub fun sort(xs : list<int>) : <div|_e> list<int>
   match xs
@@ -6,3 +6,5 @@ pub fun sort(xs : list<int>) : <div|_e> list<int>
       val (start, end) = xx.partition fn (y) y >= x
       start.sort ++ [x] ++ end.sort
     Nil -> Nil
+
+
