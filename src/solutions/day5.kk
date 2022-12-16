@@ -82,5 +82,5 @@ pub fun main()
   println("Problem 1: " ++ p1)
 
   var p2 := stacks.rearrange(moves, id).show-stack-heads
-  println("Problem 1: " ++ p2)
+  println("Problem 2: " ++ p2)
 
