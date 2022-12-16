@@ -2,18 +2,13 @@ module day2
 
 import src/lib
 
-fun unwrap-maybe(maybe-val)
-  match maybe-val
-    Just(a) -> a
-
-
 fun parse-input(input-text)
   input-text
     .split("\n")
     .map fn (round)
-      val r = round.split(" ")
+      val [r1, r2] = round.split(" ")
 
-      (r[0].unwrap-maybe, r[1].unwrap-maybe)
+      (r1, r2)
 
 fun calc-p1-score((op, me) : (string, string))
   match me
@@ -36,7 +31,6 @@ fun calc-p1-score((op, me) : (string, string))
         "A" -> 0
     )
 
-
 fun calc-p2-score((op, outcome) : (string, string))
   val outcome-score = match outcome
     "X" -> 0
@@ -56,14 +50,11 @@ fun calc-p2-score((op, outcome) : (string, string))
 
   outcome-score + hand-score
 
-
-
 pub fun main()
   val input = get-input("2").trim.parse-input
+
   val p1 = input.map(calc-p1-score).sum
-  print("Problem 1: ")
-  println(p1)
+  println("Problem 1: " ++ p1.show)
 
   val p2 = input.map(calc-p2-score).sum
-  print("Problem 2: ")
-  println(p2)
+  println("Problem 2: " ++ p2.show)

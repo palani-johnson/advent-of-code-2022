@@ -38,8 +38,7 @@ pub fun main()
       chars.make-group(chars.length / 2).find-dup
     .concat-maybe
     .sum
-  print("Problem 1: ")
-  println(p1)
+  println("Problem 1: " ++ p1.show)
 
   val p2 = input
     .make-group(3)
@@ -47,5 +46,4 @@ pub fun main()
       find-dup(group)
     .concat-maybe
     .sum
-  print("Problem 2: ")
-  println(p2)
+  println("Problem 2: " ++ p2.show)

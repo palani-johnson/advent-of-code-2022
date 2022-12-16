@@ -12,7 +12,7 @@ fun find-dup(chars : list<char>)
         unique := unique ++ [c]
         Nothing
 
-fun find-marker(input : string, size: int = 4)
+fun find-marker(input : string, size : int)
   var chars-processed := size
   var to-process := input.list
   var processing := to-process.take(size)
@@ -27,10 +27,8 @@ fun find-marker(input : string, size: int = 4)
 pub fun main()
   val input = get-input("6").trim
 
-  val p1 = input.find-marker
-  print("Problem 1: ")
-  println(p1)
+  val p1 = input.find-marker(4)
+  println("Problem 1: " ++ p1.show)
 
   val p2 = input.find-marker(14)
-  print("Problem 2: ")
-  println(p2)
+  println("Problem 2: " ++ p2.show)
